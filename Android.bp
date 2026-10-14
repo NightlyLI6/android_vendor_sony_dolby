@@ -7,3 +7,237 @@ soong_namespace {
 	],
 }
 
+
+cc_prebuilt_binary {
+	name: "vendor.dolby.hardware.dms@2.0-service",
+	owner: "dolby",
+	srcs: ["proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service"],
+	relative_install_path: "hw",
+	check_elf_files: false,
+	compile_multilib: "64",
+	strip: {
+		none: true,
+	},
+	shared_libs: [
+		"liblog",
+		"libutils",
+		"libhidlbase",
+		"libc++",
+		"libc",
+		"libm",
+		"libdl",
+	],
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdapparamstorage",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdapparamstorage.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdeccfg",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdeccfg.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdlbdsservice",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdlbdsservice.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdlbpreg",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdlbpreg.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libstagefright_soft_ac4dec",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libstagefright_soft_ac4dec.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libstagefright_soft_ddpdec",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libstagefright_soft_ddpdec.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libstagefrightdolby",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libstagefrightdolby.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdlbvol",
+	owner: "dolby",
+	relative_install_path: "soundfx",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libdlbvol.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libswdap",
+	owner: "dolby",
+	relative_install_path: "soundfx",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libswdap.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libswgamedap",
+	owner: "dolby",
+	relative_install_path: "soundfx",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libswgamedap.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libswvqe",
+	owner: "dolby",
+	relative_install_path: "soundfx",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/soundfx/libswvqe.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.dolby.hardware.dms@2.0-impl",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.dolby.hardware.dms@2.0",
+	owner: "dolby",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0.so"],
+		},
+	},
+	compile_multilib: "64",
+	soc_specific: true,
+}
